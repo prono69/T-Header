@@ -37,7 +37,6 @@ COPY_FILES() {
         if [[ "$version" -le 7 ]]; then
                 rm -rf $PREFIX/share/figlet/ASCII-Shadow.flf
                 cp .object/color*.* .object/font*.* ~/.termux/
-                cp .object/termux.properties2 ~/.termux/termux.properties
                 cp .object/ASCII-Shadow.flf $PREFIX/share/figlet/
 		cp .banner.sh ~/
 		termux-reload-settings
@@ -52,8 +51,6 @@ COPY_FILES() {
         fi
 	if [[ "$version1" -eq 10 ]] || [[ "$version1" -eq 11 ]]; then
 		rm -rf $PREFIX/share/figlet/ASCII-Shadow.flf
-		cp .object/color*.* .object/font*.* ~/.termux/;
-		cp .object/termux.properties ~/.termux/
 		cp .object/ASCII-Shadow.flf $PREFIX/share/figlet/
 		cp .banner.sh ~/
 		termux-reload-settings
