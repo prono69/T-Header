@@ -36,18 +36,24 @@ COPY_FILES() {
         mkdir -p ~/.termux/;
         if [[ "$version" -le 7 ]]; then
                 rm -rf $PREFIX/share/figlet/ASCII-Shadow.flf
+                cp .object/color*.* .object/font*.* ~/.termux/
+                # cp .object/termux.properties2 ~/.termux/termux.properties
                 cp .object/ASCII-Shadow.flf $PREFIX/share/figlet/
 		cp .banner.sh ~/
 		termux-reload-settings
 
         else
                 rm -rf $PREFIX/share/figlet/ASCII-Shadow.flf
+                cp .object/color*.* .object/font*.* ~/.termux/;
                 cp .object/ASCII-Shadow.flf $PREFIX/share/figlet/
+                # cp .object/termux.properties ~/.termux/
 		cp .banner.sh ~/
 		termux-reload-settings
         fi
 	if [[ "$version1" -eq 10 ]] || [[ "$version1" -eq 11 ]]; then
 		rm -rf $PREFIX/share/figlet/ASCII-Shadow.flf
+		cp .object/color*.* .object/font*.* ~/.termux/;
+		# cp .object/termux.properties ~/.termux/
 		cp .object/ASCII-Shadow.flf $PREFIX/share/figlet/
 		cp .banner.sh ~/
 		termux-reload-settings
@@ -59,7 +65,7 @@ echo "";
 echo -e "\e[1;34m[*] \e[32minstall packages....\e[0m";
 echo "";
 (apt update -y && apt upgrade -y) &> /dev/null;
-apt install figlet pv ncurses-utils binutils coreutils wget git zsh termux-api procps gawk exa termux-tools -y &> /dev/null;
+apt install figlet python pv ncurses-utils binutils coreutils wget git zsh termux-api procps gawk exa termux-tools -y &> /dev/null;
 termux-wake-lock;
 if [ -e $PREFIX/share/figlet/Remo773.flf ]; then
 	echo -e "\e[1;34m[*] \033[32mRemo773.flf figlet font is present\033[0m";
