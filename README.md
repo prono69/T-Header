@@ -13,6 +13,13 @@ This Bash script contains Oh-My-Zsh With, command autosuggestion, syntax highlig
 - [x] Custom prompt cursor
 - [ ] other (git prompt)
 
+## Termux keyboard features with shortcuts
+
+- [x] open new session `CTRL + t`
+- [x] close terminal <sub><sub><img src="https://raw.githubusercontent.com/google/material-design-icons/master/symbols/web/keyboard/materialsymbolsoutlined/keyboard_20px.svg"></sub></sub> swipe up throughout that icon
+- [x] swich between two sessions `CTRL + 4` and `CTRL + 5`
+- [x] other shortcuts need video guide.
+
 ## Download and installation steps
 <img src="https://user-images.githubusercontent.com/28594846/42721978-6b90278c-8761-11e8-97f2-eca4f86e837f.jpeg" width="200" hight="220">
 
@@ -22,7 +29,8 @@ This Bash script contains Oh-My-Zsh With, command autosuggestion, syntax highlig
 3. `cd T-Header/`
 4. `ls`
 5. `bash t-header.sh`
-6. after complete all processing just --open new session--
+6. after complete all processing just --open new session-- or `source ~/.zshrc`
+7. For remove tool `cd ~/T-header && bash t-header.sh --remove && exit`
 #
 Video guide available on YouTube channel { [Remo773 T-Bag](https://youtu.be/8Duxj_-b4og) }
 
